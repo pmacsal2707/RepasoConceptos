@@ -1,0 +1,19 @@
+p {
+    color: red;
+    font-family: Pablo;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: italic;
+    text-align: justify;
+    line-height: 2;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 1px black;
+}
+h1 {
+    text-align: center;
+    text-decoration: underline;
+}
+span {
+    text-decoration: line-through;
+}

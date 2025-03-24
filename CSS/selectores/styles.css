@@ -1,0 +1,16 @@
+p {
+    color: blue;
+}
+li {
+    list-style: none;
+    color: orange;
+}
+span {
+    color: darkblue;
+}
+.faltante {
+    color: red;
+}
+#ingrediente-secreto {
+    color: green;
+}
