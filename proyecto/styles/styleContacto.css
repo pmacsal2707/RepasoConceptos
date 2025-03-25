@@ -41,6 +41,11 @@ input, textarea {
     width: 100%;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 100px;
 }
 
 .formulario_submit {
@@ -55,6 +60,7 @@ input, textarea {
 .formulario_submit:hover {
     background-color: #555;
 }
+
 a {
     text-decoration: none;
     color: #b0b0b0;
