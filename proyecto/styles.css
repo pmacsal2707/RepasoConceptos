@@ -54,3 +54,14 @@ input, textarea {
 .formulario_submit:hover {
     background-color: #555;
 }
+a {
+    text-decoration: none;
+    color: #b0b0b0;
+}
+
+.imagen_filamento {
+    width: 30%;
+}
+.imagen_contacto {
+    width: 5%;
+}
