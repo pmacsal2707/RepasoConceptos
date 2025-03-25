@@ -24,50 +24,54 @@
         <img src="images/contacto.png" alt="Imagen de un Teléfono" class="imagen_contacto">
         <p>¿Tienes dudas? Contáctanos y descubre cómo podemos ayudarte en tu próxima impresión sostenible.</p>
 
-        <div>
-            <label class="datos" for="name">Nombre completo</label>
-            <input class="formulario_input" id="name" type="text" placeholder="ej: Juan Pérez" required>
-        </div>
+        <fieldset>
+            <legend>Formulario de contacto</legend>
+            
+            <div>
+                <label class="datos" for="name">Nombre completo</label>
+                <input class="formulario_input" id="name" type="text" placeholder="ej: Juan Pérez" required>
+            </div>
 
-        <div>
-            <label class="datos" for="telf">Teléfono</label>
-            <input class="formulario_input" id="telf" type="number" placeholder="ej: 123-456-7890" required>
-        </div>
+            <div>
+                <label class="datos" for="telf">Teléfono</label>
+                <input class="formulario_input" id="telf" type="number" placeholder="ej: 123-456-7890" required>
+            </div>
 
-        <div>
-            <label class="datos" for="fech">Fecha de Nacimiento</label>
-            <input class="formulario_input" id="fech" type="date" placeholder="Fecha de Nacimiento" required>
-        </div>
+            <div>
+                <label class="datos" for="fech">Fecha de Nacimiento</label>
+                <input class="formulario_input" id="fech" type="date" placeholder="Fecha de Nacimiento" required>
+            </div>
 
-        <div>
-            <label class="datos" for="mail">Email</label>
-            <input class="formulario_input" id="mail" type="text" placeholder="ej: correo@gmail.com" required>
-        </div>
+            <div>
+                <label class="datos" for="mail">Email</label>
+                <input class="formulario_input" id="mail" type="text" placeholder="ej: correo@gmail.com" required>
+            </div>
 
-        <div>
-            <label class="datos" for="passwd">Password</label>
-            <input class="formulario_input" id="passwd" type="password" placeholder="*******" required>
-        </div>
+            <div>
+                <label class="datos" for="passwd">Password</label>
+                <input class="formulario_input" id="passwd" type="password" placeholder="*******" required>
+            </div>
 
-        <div class="opciones">
-            <select name="opciones">
-                <option value="opcion1">Opcion 1</option>
-                <option value="opcion2">Opcion 2</option>
-                <option value="opcion3">Opcion 3</option>
-            </select>
-        </div>
+            <div class="opciones">
+                <select name="opciones">
+                    <option value="opcion1">Opcion 1</option>
+                    <option value="opcion2">Opcion 2</option>
+                    <option value="opcion3">Opcion 3</option>
+                </select>
+            </div>
 
-        <div>
-            <label class="datos" for="mensaje">Mensaje</label>
-            <textarea rows="5" class="formulario_textarea" id="mensaje" placeholder="Deja tu mensaje..."></textarea>
-        </div>
+            <div>
+                <label class="datos" for="mensaje">Mensaje</label>
+                <textarea rows="5" class="formulario_textarea" id="mensaje" placeholder="Deja tu mensaje..."></textarea>
+            </div>
 
-        <label for="terminos">
-            <input class="formulario_checkbox" type="checkbox" name="terminos" id="terminos" required>
-            Acepto los términos y condiciones
-        </label>
+            <label for="terminos">
+                <input class="formulario_checkbox" type="checkbox" name="terminos" id="terminos" required>
+                Acepto los términos y condiciones
+            </label>
 
-        <input class="formulario_input formulario_submit" type="submit" value="Enviar">
+            <input class="formulario_input formulario_submit" type="submit" value="Enviar">
+        </fieldset>
     </form>
 
     <footer>
