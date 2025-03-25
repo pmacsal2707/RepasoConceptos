@@ -22,7 +22,8 @@ nav ul li {
     margin: 0 10px;
 }
 
-section, .card, .formulario {
+section, .card, .formulario, footer
+ {
     margin: 20px;
     padding: 20px;
     background-color: white;
@@ -64,4 +65,8 @@ a {
 }
 .imagen_contacto {
     width: 5%;
+}
+.imagen_equipo, .imagen_historia, .imagen_productos {
+    width: 30%;
+    border-radius: 8px;
 }
