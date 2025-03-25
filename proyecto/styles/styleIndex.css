@@ -4,6 +4,10 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     text-align: center;
+    background-image: url('https://img.freepik.com/vector-premium/fondo-vector-confeti-gris-abstracto_88343-1536.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -22,8 +26,7 @@ nav ul li {
     margin: 0 10px;
 }
 
-section, .card, .formulario, footer
- {
+section, .card, footer {
     margin: 20px;
     padding: 20px;
     background-color: white;
@@ -31,30 +34,6 @@ section, .card, .formulario, footer
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.formulario {
-    padding: 50px;
-}
-
-input, textarea {
-    padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.formulario_submit {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.formulario_submit:hover {
-    background-color: #555;
-}
 a {
     text-decoration: none;
     color: #b0b0b0;
@@ -63,10 +42,20 @@ a {
 .imagen_filamento {
     width: 30%;
 }
-.imagen_contacto {
-    width: 5%;
+
+.seccion_alta_calidad {
+    background: #ededed;
+    padding: 20px;
+    font-family: sans-serif;
+    border-left: 5px solid #999;
 }
-.imagen_equipo, .imagen_historia, .imagen_productos {
-    width: 30%;
-    border-radius: 8px;
+
+.seccion_alta_calidad h2 {
+    margin: 0;
+    font-weight: 100;
+}
+
+.seccion_alta_calidad p {
+    color: #555;
+    text-align: justify;
 }

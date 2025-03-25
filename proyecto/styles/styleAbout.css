@@ -22,7 +22,7 @@ nav ul li {
     margin: 0 10px;
 }
 
-.formulario, footer
+section, .card, footer
  {
     margin: 20px;
     padding: 20px;
@@ -31,35 +31,22 @@ nav ul li {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.formulario {
-    padding: 50px;
-}
-
-input, textarea {
-    padding: 10px;
-    margin: 10px 0;
-    width: 100%;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-.formulario_submit {
-    background-color: #333;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-.formulario_submit:hover {
-    background-color: #555;
-}
 a {
     text-decoration: none;
     color: #b0b0b0;
 }
 
+.imagen_filamento {
+    width: 30%;
+}
 .imagen_contacto {
     width: 5%;
+}
+.imagen_equipo, .imagen_historia, .imagen_productos {
+    width: 30%;
+    border-radius: 8px;
+}
+
+#gradienteNuestrosProductos {
+    background: linear-gradient(#c2c2c2, rgba(255, 255, 255, 0) 100%);
 }
