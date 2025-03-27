@@ -80,3 +80,11 @@ fieldset {
 legend {
     padding: 0 6px;
 }
+
+.barra_navegacion:hover {
+    color: #ffee93;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #695e21;
+}

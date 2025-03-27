@@ -59,3 +59,7 @@ a {
     color: #555;
     text-align: justify;
 }
+
+.barra_navegacion:hover {
+    color: #b8b642;
+}

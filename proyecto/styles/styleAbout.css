@@ -50,3 +50,17 @@ a {
 #gradienteNuestrosProductos {
     background: linear-gradient(#c2c2c2, rgba(255, 255, 255, 0) 100%);
 }
+
+.barra_navegacion:hover {
+    color: #ffee93;
+}
+
+.imagen_historia:hover, .imagen_equipo:hover, .imagen_productos:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s cubic-bezier(.17,.67,.83,.67);
+}
+
+html::selection {
+    background-color: #ffee93;
+    color: #333;
+}
