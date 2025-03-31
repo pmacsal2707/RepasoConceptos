@@ -64,3 +64,8 @@ html::selection {
     background-color: #ffee93;
     color: #333;
 }
+
+.card-animation:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s cubic-bezier(.17,.67,.83,.67);
+}
