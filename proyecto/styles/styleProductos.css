@@ -1,0 +1,146 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Estilo para la sección de productos */
+section.container {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+/* Título de la sección */
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #007bff; /* Color más vibrante para el título */
+    text-align: center; /* Centrado del título */
+}
+
+/* Estilo para las tarjetas de productos */
+.card {
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%; /* Se asegura de ocupar el 100% del contenedor */
+    max-width: 350px; /* Ancho máximo de las tarjetas */
+    margin: 15px auto; /* Espaciado entre tarjetas */
+    height: 500px; /* Altura fija de la tarjeta */
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo para la imagen del producto */
+.card-img-top {
+    width: 100%;
+    height: 250px; /* Alto fijo para la imagen */
+    object-fit: cover; /* Asegura que la imagen se recorte y cubra el espacio sin distorsionarse */
+    border-bottom: 3px solid #007bff; /* Añade una línea de color debajo de la imagen */
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 20px; /* Un poco menos de padding para un aspecto más ordenado */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Título del producto */
+.card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center; /* Centrado del título */
+}
+
+/* Descripción del producto */
+.card-text {
+    font-size: 1rem;
+    margin-bottom: 12px; /* Espaciado más uniforme entre textos */
+    color: #555;
+    line-height: 1.6; /* Mayor altura de línea para facilitar la lectura */
+}
+
+/* Precio y detalles del producto */
+.card-text strong {
+    font-weight: bold;
+    color: #007bff; /* Color más llamativo para precios y detalles */
+}
+
+/* Estilo del botón de agregar al carrito */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 12px 18px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: auto; /* Hace que el botón quede en la parte inferior */
+    display: block;
+    width: 100%; /* El botón ocupa todo el ancho de la tarjeta */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Ajustes de espaciado entre tarjetas */
+.row-cols-1,
+.row-cols-md-3 {
+    margin: 0 auto;
+}
+
+/* Asegurando que todas las tarjetas tengan la misma altura */
+.card.h-100 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fondo y borde de las tarjetas */
+.card-body {
+    background-color: #ffffff;
+}
+
+/* Estilo para los textos en la barra de navegación */
+.navbar-nav a {
+    color: #f8f9fa !important;
+}
+
+/* Agregar espaciado entre tarjetas */
+.row-cols-md-3 {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
