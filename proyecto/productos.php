@@ -19,7 +19,7 @@ include 'includes/conexion.php';
             <ul class="list-inline">
                 <li class="list-inline-item"><a href="index.html" class="barra_navegacion">Inicio</a></li>
                 <li class="list-inline-item"><a href="about.html" class="barra_navegacion">Sobre nosotros</a></li>
-                <li class="list-inline-item"><a href="contacto.html" class="barra_navegacion">Contacto</a></li>
+                <li class="list-inline-item"><a href="contacto.php" class="barra_navegacion">Contacto</a></li>
                 <li class="list-inline-item"><a href="productos.php" class="barra_navegacion">Productos</a></li>
             </ul>
         </nav>
