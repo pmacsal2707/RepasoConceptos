@@ -1,6 +1,6 @@
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="">
+    <a class="navbar-item" href="index.php?vista=home">
       <img src="./img/logo.png" alt="" width="65" height="28">
   </a>
 
@@ -19,9 +19,9 @@
         <a class="navbar-link">Usuarios</a>
 
         <div class="navbar-dropdown">
-          <a class="navbar-item">Nuevo</a>
-          <a class="navbar-item">Lista</a>
-          <a class="navbar-item">Buscar</a>
+          <a class="navbar-item" href="index.php?vista=user_new">Nuevo</a>
+          <a class="navbar-item" href="index.php?vista=user_list">Lista</a>
+          <a class="navbar-item" href="index.php?vista=user_searh">Buscar</a>
         </div>
       </div>
 
