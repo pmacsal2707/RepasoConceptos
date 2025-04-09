@@ -1,6 +1,5 @@
 <?php
 // Iniciar la sesión
-session_start();
 
 // Inicializar las variables de error
 $nombreErr = "";

@@ -7,17 +7,6 @@
     <link rel="stylesheet" href="styles/styleIndex.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenido a Filamentopia</h1>
-        <nav>
-            <ul>
-                <li><a href="#" class="barra_navegacion">Inicio</a></li>
-                <li><a href="about.html" class="barra_navegacion">Sobre nosotros</a></li>
-                <li><a href="contacto.php" class="barra_navegacion">Contacto</a></li>
-                <li><a href="productos.php" class="barra_navegacion">Productos</a></li>
-            </ul>
-        </nav>
-    </header>
     
     <section>
         <h2>Filamento 3D Reciclado</h2>

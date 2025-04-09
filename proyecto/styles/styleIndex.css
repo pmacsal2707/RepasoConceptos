@@ -10,23 +10,6 @@ body {
     background-attachment: fixed;
 }
 
-header {
-    background-color: #343a40;
-    
-    color: white;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 10px;
-}
-
 section, .card, footer {
     margin: 20px;
     padding: 20px;
