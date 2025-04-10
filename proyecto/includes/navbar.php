@@ -17,7 +17,19 @@
 
             <a class="navbar-item" href="index.php?vista=index" style="margin-right: 15px;">Inicio</a>
             <a class="navbar-item" href="index.php?vista=about" style="margin-right: 15px;">Sobre nosotros</a>
-            <a class="navbar-item" href="index.php?vista=productos" style="margin-right: 15px;">Productos</a>
+
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">Productos</a>
+
+                <div class="navbar-dropdown">
+                    <a href="index.php?vista=product_new" class="navbar-item">Nuevo</a>
+                    <a href="index.php?vista=product_list" class="navbar-item">Lista</a>
+                    <a href="index.php?vista=product_category" class="navbar-item">Por categoría</a>
+                    <a href="index.php?vista=product_search" class="navbar-item">Buscar</a>
+                </div>
+            </div>
+
+            <a class="navbar-item" href="index.php?vista=productos" style="margin-right: 15px;">Tienda</a>
             <a class="navbar-item" href="index.php?vista=contacto" style="margin-right: 15px;">Contacto</a>
 
         </div>
