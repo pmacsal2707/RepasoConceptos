@@ -39,7 +39,10 @@
 
 
     $check_user=conexion();
-    $check_user=$check_user->query("SELECT * FROM usuario WHERE usuario_usuario='$usuario'");
+    $stmt = $check_user->prepare("SELECT * FROM usuario WHERE usuario_usuario = :usuario");
+    $stmt->bindParam(':usuario', $usuario, PDO::PARAM_STR);
+    $stmt->execute();
+    $check_user = $stmt;
     if($check_user->rowCount()==1){
 
     	$check_user=$check_user->fetch();

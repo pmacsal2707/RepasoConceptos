@@ -1,7 +1,7 @@
 <?php
 	
 	# Conexion a la base de datos #
-	function conexion(){
+	function conexion(): PDO{
 		$pdo = new PDO('mysql:host=localhost;dbname=filamentos', 'root', '');
 		return $pdo;
 	}
