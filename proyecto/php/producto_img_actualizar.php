@@ -6,7 +6,7 @@
 
     /*== Verificando producto ==*/
     $check_producto=conexion();
-    $check_producto=$check_producto->query("SELECT * FROM producto WHERE producto_id='$product_id'");
+    $check_producto=$check_producto->query("SELECT * FROM productos WHERE id='$product_id'");
 
     if($check_producto->rowCount()==1){
         $datos=$check_producto->fetch();
@@ -35,12 +35,12 @@
 
 
     /* Directorios de imagenes */
-    $img_dir='../img/producto/';
+    $img_dir='../multimedia/images/producto/';
 
 
     /* Creando directorio de imagenes */
     if(!file_exists($img_dir)){
-        if(!mkdir($img_dir,0777)){
+        if(!mkdir($img_dir,permissions: 0777)){
             echo '
                 <div class="notification is-danger is-light">
                     <strong>¡Ocurrio un error inesperado!</strong><br>
@@ -91,7 +91,7 @@
     }
 
     /* Nombre de la imagen */
-    $img_nombre=renombrar_fotos($datos['producto_nombre']);
+    $img_nombre=renombrar_fotos($datos['nombre']);
 
     /* Nombre final de la imagen */
     $foto=$img_nombre.$img_ext;
@@ -109,16 +109,16 @@
 
 
     /* Eliminando la imagen anterior */
-    if(is_file($img_dir.$datos['producto_foto']) && $datos['producto_foto']!=$foto){
+    if(is_file($img_dir.$datos['imagen_url']) && $datos['imagen_url']!=$foto){
 
-        chmod($img_dir.$datos['producto_foto'], 0777);
-        unlink($img_dir.$datos['producto_foto']);
+        chmod($img_dir.$datos['imagen_url'], 0777);
+        unlink($img_dir.$datos['imagen_url']);
     }
 
 
     /*== Actualizando datos ==*/
     $actualizar_producto=conexion();
-    $actualizar_producto=$actualizar_producto->prepare("UPDATE producto SET producto_foto=:foto WHERE producto_id=:id");
+    $actualizar_producto=$actualizar_producto->prepare("UPDATE productos SET imagen_url=:foto WHERE id=:id");
 
     $marcadores=[
         ":foto"=>$foto,

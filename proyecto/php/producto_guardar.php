@@ -179,7 +179,7 @@
 		$img_nombre=renombrar_fotos($nombre);
 
 		/* Nombre final de la imagen */
-		$foto=$img_nombre.$img_ext;
+		$foto="multimedia/images/producto/".$img_nombre.$img_ext; // Problema ruta
 
 		/* Moviendo imagen al directorio */
 		if(!move_uploaded_file($_FILES['producto_foto']['tmp_name'], $img_dir.$foto)){
