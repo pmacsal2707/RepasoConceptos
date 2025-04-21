@@ -2,7 +2,7 @@
 
     <div class="navbar-brand">
         <a class="navbar-item" href="index.php?vista=index" style="margin-right: 20px;">
-            <img src="./multimedia/images/logo.png"  alt="Logo">
+            <img src="./multimedia/images/logo.png" alt="Logo">
         </a>
 
         <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -24,7 +24,7 @@
                 <div class="navbar-dropdown">
                     <a href="index.php?vista=product_new" class="navbar-item">Nuevo</a>
                     <a href="index.php?vista=product_list" class="navbar-item">Lista</a>
-                    <a href="index.php?vista=product_category" class="navbar-item">Por categoría</a>
+                    <!-- <a href="index.php?vista=product_category" class="navbar-item">Por categoría</a> -->
                     <a href="index.php?vista=product_search" class="navbar-item">Buscar</a>
                 </div>
             </div>
@@ -42,6 +42,9 @@
                     </a>
                     <a href="index.php?vista=logout" class="button is-light is-rounded">
                         Salir
+                    </a>
+                    <a href="index.php?vista=cart" class="button is-light is-rounded">
+                        <i class="fas fa-shopping-cart" ></i>
                     </a>
                 </div>
             </div>
