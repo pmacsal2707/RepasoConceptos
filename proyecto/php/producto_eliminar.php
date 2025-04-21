@@ -4,22 +4,22 @@
 
     /*== Verificando producto ==*/
     $check_producto=conexion();
-    $check_producto=$check_producto->query("SELECT * FROM producto WHERE producto_id='$product_id_del'");
+    $check_producto=$check_producto->query("SELECT * FROM productos WHERE id='$product_id_del'");
 
     if($check_producto->rowCount()==1){
 
     	$datos=$check_producto->fetch();
 
     	$eliminar_producto=conexion();
-    	$eliminar_producto=$eliminar_producto->prepare("DELETE FROM producto WHERE producto_id=:id");
+    	$eliminar_producto=$eliminar_producto->prepare("DELETE FROM productos WHERE id=:id");
 
     	$eliminar_producto->execute([":id"=>$product_id_del]);
 
     	if($eliminar_producto->rowCount()==1){
 
-    		if(is_file("./img/producto/".$datos['producto_foto'])){
-    			chmod("./img/producto/".$datos['producto_foto'], 0777);
-				unlink("./img/producto/".$datos['producto_foto']);
+    		if(is_file("./multimedia/images/producto/".$datos['imagen_url'])){
+    			chmod("./multimedia/images/producto/".$datos['imagen_url'], 0777);
+				unlink("./multimedia/images/producto/".$datos['imagen_url']);
     		}
 
 	        echo '

@@ -179,18 +179,21 @@
 		$img_nombre=renombrar_fotos($nombre);
 
 		/* Nombre final de la imagen */
-		$foto="multimedia/images/producto/".$img_nombre.$img_ext; // Problema ruta
+		$foto = $img_nombre . $img_ext; // Solo el nombre y extensión de la imagen
 
 		/* Moviendo imagen al directorio */
-		if(!move_uploaded_file($_FILES['producto_foto']['tmp_name'], $img_dir.$foto)){
-			echo '
-	            <div class="notification is-danger is-light">
-	                <strong>¡Ocurrio un error inesperado!</strong><br>
-	                No podemos subir la imagen al sistema en este momento, por favor intente nuevamente
-	            </div>
-	        ';
-			exit();
+		if (!move_uploaded_file($_FILES['producto_foto']['tmp_name'], $img_dir . $foto)) {
+		    echo '
+		        <div class="notification is-danger is-light">
+		            <strong>¡Ocurrio un error inesperado!</strong><br>
+		            No podemos subir la imagen al sistema en este momento, por favor intente nuevamente
+		        </div>
+		    ';
+		    exit();
 		}
+
+		/* Ruta relativa para la base de datos */
+		$foto = 'multimedia/images/producto/' . $foto;
 
 	}else{
 		$foto="";
@@ -208,7 +211,7 @@
         ":color"=>$color,
         ":peso"=>$peso,
         ":stock"=>$stock,
-        ":foto"=>"multimedia/images/producto/".$foto
+        ":foto"=>$foto
     ];
 
     $guardar_producto->execute($marcadores);
