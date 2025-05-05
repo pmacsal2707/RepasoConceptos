@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 — Temporizadores</title>
+</head>
+<script>
+    // Mostramos mensaje después de 
+    setTimeout(() => {
+        alert("Han pasado 5 segundos desde que se cargó la página.");
+    }, 5000); // Esto permite ejecutar el código después de 5 segundos
+
+    // Reloj en consola que actualiza cada segundo
+    setInterval(() => { // Esto nos permite ejecutar el código en intervalos de tiempo
+        const ahora = new Date();
+        console.log(`Hora actual: ${ahora.toLocaleTimeString()}`); // Mostramos la hora
+    }, 1000); // Establecemos un segundo
+</script>
+<body>
+    
+</body>
+</html>
