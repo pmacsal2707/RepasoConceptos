@@ -6,16 +6,20 @@
     <title>Tarea 2 — Temporizadores</title>
 </head>
 <script>
-    // Mostramos mensaje después de 
-    setTimeout(() => {
-        alert("Han pasado 5 segundos desde que se cargó la página.");
-    }, 5000); // Esto permite ejecutar el código después de 5 segundos
+async function mostrarNombresUsuarios() {
+    try {
+        const respuesta = await fetch('https://jsonplaceholder.typicode.com/users');
+        const usuarios = await respuesta.json();
+        usuarios.forEach(usuario => {
+            console.log(usuario.name);
+        });
+    } catch (error) {
+        console.error('Error al obtener los usuarios:', error);
+    }
+}
 
-    // Reloj en consola que actualiza cada segundo
-    setInterval(() => { // Esto nos permite ejecutar el código en intervalos de tiempo
-        const ahora = new Date();
-        console.log(`Hora actual: ${ahora.toLocaleTimeString()}`); // Mostramos la hora
-    }, 1000); // Establecemos un segundo
+// Llama a la función para mostrar los nombres en consola
+mostrarNombresUsuarios();
 </script>
 <body>
     

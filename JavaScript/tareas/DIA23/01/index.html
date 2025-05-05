@@ -3,25 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tarea 1 — Funciones avanzadas</title>
+    <title>Tarea 1 — Uso de promesas</title>
 </head>
 <script>
-    function procesarNumeros(num1, num2, callback) {
-        const suma = num1 + num2; // Hacemos la suma
-        return callback(suma); // Ejecutamos la función callback con la suma
-    }
+    const checkNumber = (num) => {
+        return new Promise((resolve, reject) => {
+            if (num > 10) {
+                resolve(`El número ${num} es mayor a 10.`);
+            } else {
+                reject(`El número ${num} no es mayor a 10.`);
+            }
+        });
+    };
 
-    function esParOImpar(numero) {
-        return numero % 2 === 0 ? "La suma es par" : "La suma es impar"; // Devolvemos el resultado, si es par o impar
-    }
+    // Ejemplo de uso
+    let number = prompt("Introduzca un número:") // Cambia este valor para probar
 
-    let num1 = parseInt(prompt("Ingrese un número")); // Pedimos un número al usuario
-    let num2 = parseInt(prompt("Ingrese otro número")); // Pedimos otro número al usuario
-
-    const resultado = procesarNumeros(num1, num2, esParOImpar); // Llamamos a la función procesarNumeros y le mandamos los datos y el callback
-    alert(resultado);
+    checkNumber(number)
+        .then((message) => console.log(message))
+        .catch((error) => console.error(error));
 </script>
 <body>
 
 </body>
 </html>
+
