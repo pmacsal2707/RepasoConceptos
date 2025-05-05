@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 — Manipulación del DOM avanzada</title>
+    <script>
+        // Con esto conseguimos ejecutar el código cuando el elemento HTML esté cargado
+        document.addEventListener('DOMContentLoaded', () => {
+            // Crear el elemento ul
+            const ul = document.createElement('ul');
+
+            // Crear y agregar 5 elementos li al ul
+            for (let i = 1; i <= 5; i++) {
+                const li = document.createElement('li');
+                li.textContent = `Elemento ${i}`; // Texto del elemento li
+                ul.appendChild(li); // Agregar li al ul
+            }
+
+            // Agregar el ul al body
+            document.body.appendChild(ul);
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

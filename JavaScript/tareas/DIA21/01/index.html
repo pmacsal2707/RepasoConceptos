@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1 — Capturar eventos</title>
+</head>
+<script>
+    // Cambiar contenido botón
+    function cambiarTexto() {
+        var boton = document.getElementById("boton"); // Seleccionamos el botón a través de su id
+
+        if (boton.innerHTML === "Botón") { // Verificamos que el boton tenga el texto "Botón"
+            boton.innerHTML = "¡Clicado!"; // En tal caso cambiamos el texto a "¡Clicado!"
+            boton.style.backgroundColor = "#90ee90"; // Verde claro
+        } else {
+            boton.innerHTML = "Botón";
+            // ponemos el color de fondo por defecto
+            boton.style.backgroundColor = "initial";
+        }
+    }
+</script>
+<body>
+    <button id="boton" onclick="cambiarTexto()">Botón</button> <!-- Le asignamos el evento onclick -->
+</body>
+</html>

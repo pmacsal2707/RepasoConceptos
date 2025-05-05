@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 — Crear un formulario y validar</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("userForm");
+
+        form.addEventListener("submit", (event) => {
+            event.preventDefault(); // Evita el envío del formulario
+
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+
+            let isValid = true;
+            let errorMessage = "";
+
+            // Validar nombre
+            if (nameInput.value.trim().length < 3) { // Eliminamos espacios en blanco y verificamos longitud
+                isValid = false;
+                errorMessage += "El nombre debe tener al menos 3 caracteres.\n"; // Si es menos de 3 mostramos mensaje de error
+            }
+
+            // Validar email
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Expresión regular para validar el formato del email
+            if (!emailRegex.test(emailInput.value.trim())) { // Eliminamos espacios en blanco y verificamos el formato
+                isValid = false;
+                errorMessage += "El email debe contener un @ y un dominio válido.\n"; // Si no cumple con la expresión regular mostramos mensaje de error
+            }
+
+            if (!isValid) {
+                alert(errorMessage); // Muestra los mensajes de error
+            } else {
+                alert("Formulario enviado correctamente.");
+                form.submit(); // Envía el formulario si es válido
+            }
+        });
+    });
+</script>
+<body>
+    <form id="userForm">
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name" required>
+        <br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
