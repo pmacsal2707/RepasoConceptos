@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 — Crear y recorrer objetos y arrays</title>
+</head>
+<script>
+    // Array de objetos con los atributos nombre y edad
+    let personas = [
+        { nombre: "Juan", edad: 25 }, // Esta es la estructura de un objeto
+        { nombre: "María", edad: 30 },
+        { nombre: "Pedro", edad: 20 },
+        { nombre: "Ana", edad: 22 }
+    ];
+    
+    // Recorremos el array y mostramos los datos en consola
+    personas.forEach(persona => { // Con este bucle recorremos cada objeto del array personas
+        console.log(`Nombre: ${persona.nombre}, Edad: ${persona.edad}`); // Mostramos los datos en la consola
+    });
+
+</script>
+<body>
+    
+</body>
+</html>

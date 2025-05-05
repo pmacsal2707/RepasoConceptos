@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 — Manipulación básica del DOM</title>
+</head>
+<script>
+    function cambiarTexto() {
+        // Obtenemos el elemento por el id
+        let texto = document.getElementById("texto");
+
+        // Cambiamos el contenido
+        texto.textContent = "El texto ha cambiado!";
+        // Cambiamos el color del texto
+        texto.style.color = "red";
+    }
+
+</script>
+<body>
+    <h1 id="texto">Este es un h1</h1>
+    <button onclick="cambiarTexto()">Cambiar texto</button>
+</body>
+</html>

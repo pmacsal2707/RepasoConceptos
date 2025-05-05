@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1 — Crear funciones</title>
+</head>
+<script>
+    // Función mayor menor
+    function mayorMenor(nombre, edad) {
+        if (edad >= 18) { // Si edad es mayor o igual a 18 significa que es mayor de edad
+            return `${nombre} es mayor de edad`;
+        } else {
+            return `${nombre} es menor de edad`;
+        }
+    }
+    let nombre = prompt("¿Cuál es tu nombre?"); // Preguntamos al usuario su nombre y lo guardamos en la variable nombre
+    let edad = parseInt(prompt("¿Cuál es tu edad?")); // Preguntamos la edad y la guardamos en la variable edad
+
+    alert(mayorMenor(nombre, edad)); // Mostramos el resultado en una ventana emergente
+</script>
+<body>
+    
+</body>
+</html>
