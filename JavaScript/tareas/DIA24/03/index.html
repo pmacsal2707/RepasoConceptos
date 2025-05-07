@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 — Simulación de login</title>
+    <script>
+        window.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('loginForm').addEventListener('submit', function(e) { // Seleccionamos el formulario a través de su id y le añadimos un listener
+                e.preventDefault();
+                let email = document.getElementById('email').value; 
+                sessionStorage.setItem('email', email); // Guardamos el email en sessionStorage
+                console.log(sessionStorage.getItem('email'));
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="loginForm">
+        <label>
+            Email:
+            <input type="email" id="email" required>
+        </label>
+        <br>
+        <label>
+            Contraseña:
+            <input type="password" id="password" required>
+        </label>
+        <br>
+        <button type="submit">Iniciar sesión</button>
+    </form>
+</body>
+</html>
+

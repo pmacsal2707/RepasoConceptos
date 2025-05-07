@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1 — Trabajar con JSON</title>
+</head>
+<body>
+    <script>
+        // Creamos el objeto de usuario con los campos nombre, edad y email
+        let usuario = {
+            nombre: "Pablo Macías",
+            edad: 19,
+            email: "pmaciassalguero@gmail.com"
+        };
+
+        // Convertimos el objeto a JSON
+        let usuarioJSON = JSON.stringify(usuario);
+
+        // Guardamos el JSON en el localStorage
+        localStorage.setItem("usuario", usuarioJSON);
+
+        // Recuperamos el JSON del localStorage
+        let usuarioGuardado = JSON.parse(localStorage.getItem("usuario"));
+
+        // Mostramos el nombre en la consola
+        console.log(usuarioGuardado.nombre);
+    </script>
+</body>
+</html>
+
