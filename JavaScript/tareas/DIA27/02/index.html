@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 — Drag and Drop básico</title>
+    <style>
+        .caja {
+            width: 200px;
+            height: 200px;
+            border: 2px dashed #333;
+            display: inline-block;
+            vertical-align: top;
+            margin: 10px;
+            padding: 10px;
+        }
+        .draggable {
+            width: 100px;
+            padding: 10px;
+            background: #b3d9ff;
+            border: 1px solid #333;
+            cursor: grab;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev) {
+            ev.preventDefault();
+            const data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+        }
+    </script>
+</head>
+<body>
+    <div class="caja" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <div id="objeto" class="draggable" draggable="true" ondragstart="drag(event)">
+            Arrástrame
+        </div>
+    </div>
+    <div class="caja" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <!-- Caja vacía para soltar el objeto -->
+    </div>
+</body>
+</html>

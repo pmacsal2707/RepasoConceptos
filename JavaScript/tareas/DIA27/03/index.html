@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 — Uso de closures</title>
+    <script>
+        function obtenerUbicacion() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(pos) {
+                    const lat = pos.coords.latitude;
+                    const lon = pos.coords.longitude;
+                    document.getElementById('ubicacion').textContent = 
+                        `Latitud: ${lat}, Longitud: ${lon}`;
+                }, function() {
+                    document.getElementById('ubicacion').textContent = 
+                        'No se pudo obtener la ubicación.';
+                });
+            } else {
+                document.getElementById('ubicacion').textContent = 
+                    'Geolocalización no soportada.';
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="obtenerUbicacion()">Obtener ubicación</button>
+    <div id="ubicacion"></div>
+</body>
+</html>

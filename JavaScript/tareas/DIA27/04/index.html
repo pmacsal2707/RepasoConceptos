@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4 — Parámetros Rest y Ternario</title>
+    <script>
+        function mostrarContenidoTxt(event) {
+            const archivo = event.target.files[0];
+            if (archivo && archivo.type === "text/plain") {
+                const lector = new FileReader();
+                lector.onload = function(e) {
+                    document.getElementById('contenido').textContent = e.target.result;
+                };
+                lector.readAsText(archivo);
+            } else {
+                document.getElementById('contenido').textContent = "Por favor selecciona un archivo .txt";
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="file" accept=".txt" onchange="mostrarContenidoTxt(event)">
+    <div id="contenido" style="white-space: pre-wrap; border:1px solid #ccc; margin-top:10px; padding:10px;"></div>
+</body>
+</html>
