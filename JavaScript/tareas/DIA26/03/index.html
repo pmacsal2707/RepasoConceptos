@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 — Uso de closures</title>
+    <script>
+        function crearContador() {
+            let contador = 0;
+
+            return function() { // Esta función interna tiene acceso a la variable contador
+                contador++; // Podemos modificar la variable contador gracias al closure
+                console.log(`Contador: ${contador}`);
+            }
+        }
+
+        // Ejemplo de uso:
+        const contador1 = crearContador();
+        contador1(); // Contador: 1
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

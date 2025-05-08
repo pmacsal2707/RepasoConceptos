@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 1 — Crear un prototipo personalizado</title>
+    <script>
+        // Creamos un prototipo de objeto llamado "Animal"
+        function Animal(nombre, especie) {
+            this.nombre = nombre; // El this hace referencia al propio objeto (Animal)
+            this.especie = especie;
+        }
+
+        // Creamos el método presentarse para el prototipo Animal
+        Animal.prototype.presentarse = function() {
+            console.log(`Hola, soy ${this.nombre} y soy un ${this.especie}.`);
+        };
+
+        // Creamos una instancia del objeto Animal
+        const perro = new Animal('Firulais', 'perro');
+        // Llamamos al método presentarse del objeto perro
+        perro.presentarse();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

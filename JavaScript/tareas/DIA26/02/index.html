@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 — Recursividad básica</title>
+    <script>
+        // Si no le pasamos parámetros a la función, n toma el valor por defecto 10
+        function cuentaAtras(n = 10) {
+            if (n < 1) return; // Si n es menor que 1, salimos de la función
+            console.log(n);
+            cuentaAtras(n - 1); // Llamamos a la función de nuevo (recursividad) restandole 1 a n
+        }
+
+        cuentaAtras();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

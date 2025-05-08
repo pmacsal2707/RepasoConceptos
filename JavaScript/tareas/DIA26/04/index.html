@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4 — Parámetros Rest y Ternario</title>
+    <script>
+        function contarMayoresDeEdad(...edades) {
+            // Filtramos las edades mayores o iguales a 18
+            const mayores = edades.filter(edad => edad >= 18 ? true : false);
+            return mayores.length;
+        }
+
+        // Ejemplo de uso
+        console.log(contarMayoresDeEdad(15, 22, 17, 30, 12, 19));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
