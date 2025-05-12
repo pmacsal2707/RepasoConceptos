@@ -7,15 +7,20 @@
     <script>
         function obtenerUbicacion() {
             if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function(pos) {
-                    const lat = pos.coords.latitude;
-                    const lon = pos.coords.longitude;
-                    document.getElementById('ubicacion').textContent = 
-                        `Latitud: ${lat}, Longitud: ${lon}`;
-                }, function() {
-                    document.getElementById('ubicacion').textContent = 
-                        'No se pudo obtener la ubicación.';
-                });
+                navigator.geolocation.getCurrentPosition(
+                  (position) => {
+                    const lat = position.coords.latitude;
+                    const lon = position.coords.longitude;
+                    `Latitud: ${lat}, Longitud: ${lon}`;
+                    document.getElementById('ubicacion').textContent =
+                      `Latitud: ${lat}, Longitud: ${lon}`;
+                  },
+                  (error) => {
+                    console.error(error);
+                    document.getElementById('ubicacion').textContent =
+                      'No se pudo obtener la ubicación.';
+                  }
+                );
             } else {
                 document.getElementById('ubicacion').textContent = 
                     'Geolocalización no soportada.';

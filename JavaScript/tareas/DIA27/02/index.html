@@ -17,20 +17,20 @@
         .draggable {
             width: 100px;
             padding: 10px;
-            background: #b3d9ff;
+            background: #daffb3;
             border: 1px solid #333;
             cursor: grab;
             text-align: center;
         }
     </style>
     <script>
-        function allowDrop(ev) {
+        function permitirDrop(ev) {
             ev.preventDefault();
         }
-        function drag(ev) {
+        function arrastrar(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
         }
-        function drop(ev) {
+        function soltar(ev) {
             ev.preventDefault();
             const data = ev.dataTransfer.getData("text");
             ev.target.appendChild(document.getElementById(data));
@@ -38,13 +38,12 @@
     </script>
 </head>
 <body>
-    <div class="caja" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <div id="objeto" class="draggable" draggable="true" ondragstart="drag(event)">
+    <div class="caja" ondrop="soltar(event)" ondragover="permitirDrop(event)">
+        <div id="objeto" class="draggable" draggable="true" ondragstart="arrastrar(event)">
             Arrástrame
         </div>
     </div>
-    <div class="caja" ondrop="drop(event)" ondragover="allowDrop(event)">
-        <!-- Caja vacía para soltar el objeto -->
+    <div class="caja" ondrop="soltar(event)" ondragover="permitirDrop(event)">
     </div>
 </body>
 </html>
