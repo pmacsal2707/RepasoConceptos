@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Tarea 1 — Implementar Lazy Load en imágenes</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .imagen {
+      margin: 50px 0;
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      width: 600px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Tarea 1 — Implementar Lazy Load en imágenes</h1>
+
+    <div class="imagen">
+        <img src="placeholder.jpg" data-src="https://cdn.pixabay.com/photo/2019/05/23/02/21/mclaren-4223024_1280.jpg" alt="McLaren 1">
+    </div>
+    <div class="imagen">
+        <img src="placeholder.jpg" data-src="https://cdn.pixabay.com/photo/2017/05/16/11/20/mclaren-2317538_640.jpg" alt="McLaren 2">
+    </div>
+    <div class="imagen">
+        <img src="placeholder.jpg" data-src="https://cdn.pixabay.com/photo/2020/05/14/19/30/mclaren-5171102_640.jpg" alt="McLaren 3">
+    </div>
+    <div class="imagen">
+        <img src="placeholder.jpg" data-src="https://cdn.pixabay.com/photo/2018/03/09/20/43/car-3212565_640.jpg" alt="McLaren 4">
+    </div>
+    <div class="imagen">
+        <img src="placeholder.jpg" data-src="https://cdn.pixabay.com/photo/2018/01/18/18/00/car-3090879_640.jpg" alt="McLaren 5">
+    </div>
+
+  <script>
+    let observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.dataset.src;
+          observer.unobserve(img);
+        }
+      });
+    });
+
+    document.querySelectorAll('img[data-src]').forEach(img => observer.observe(img));
+  </script>
+
+</body>
+</html>

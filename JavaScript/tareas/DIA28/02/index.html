@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 — Crear notificación personalizada </title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            Notification.requestPermission().then(permiso => {
+                if (permiso === "granted") {
+                    new Notification("¡Hola desde tu web!");
+                } else {
+                    console.log("Permiso de notificación denegado");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+</body>
+</html>

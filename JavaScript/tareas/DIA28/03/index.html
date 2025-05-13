@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 3 — Crear un Web Worker sencillo</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.Worker) {
+                const worker = new Worker('worker.js');
+                worker.onmessage = function(e) {
+                    alert('Mensaje del worker: ' + e.data);
+                };
+            } else {
+                alert('Tu navegador no soporta Web Workers.');
+            }
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

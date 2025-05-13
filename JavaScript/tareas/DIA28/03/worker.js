@@ -1,0 +1,1 @@
+self.postMessage('¡Hola desde el Web Worker!');

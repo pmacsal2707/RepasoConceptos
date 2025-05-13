@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 4 — Registrar un Service Worker</title>
+    <script>
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', function() {
+            navigator.serviceWorker.register('service-worker.js')
+              .then(reg => {
+                console.log('Service Worker registrado:', reg.scope);
+              })
+              .catch(err => {
+                console.log('Error al registrar el Service Worker:', err);
+              });
+          });
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
